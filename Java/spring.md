@@ -7,10 +7,19 @@ spring 框架解决了业务逻辑层和其他各层的松耦合问题，将面�
 
 这张图摘自 Spring 官网，意思为将你的 POJO 放入 Spring，让 Spring 为你管理你的对象，在你需要的时候为你实例化
 
-## 配置元数据
+## 装配 Bean
 
-新建一个 beans.xml 文件，并且添加一下代码：
+装配 Bean 有三种方式
 
+* XML 方式显示配置
+
+* Java 中显示配置
+
+* 隐式的 Bean 扫描机制和自动装配
+
+## XML 方式自动装配 Bean
+
+新建一个 beans.xml 文件，加入一下代码：
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -18,19 +27,58 @@ spring 框架解决了业务逻辑层和其他各层的松耦合问题，将面�
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="..." class="...">
-        <!-- collaborators and configuration for this bean go here -->
-    </bean>
-
-    <bean id="..." class="...">
-        <!-- collaborators and configuration for this bean go here -->
-    </bean>
-
-    <!-- more bean definitions go here -->
-
+<!-- 在这里添加代码 -->
+    
 </beans>
 ```
-id 属性是用来标识单个 bean 定义的字符串，在将来使用的时候需要用到这个 id。class属性定义了bean的类型并使用完全限定的类名。
 
-## 实例化容器
+在里面添加一个 bean
+`<bean id="myBean" class="core.MyBean"></bean>`
 
+这样我们就可以将 core 包下的 MyBean 交给 Spring 来管理，在我们需要的时候 Spring 会为我们提供相应的对象
+
+现在我们来使用他，需要在上下文中获得
+```
+ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+MyBean my = (MyBean) ctx.getBean("myBeans");
+my.send();
+```
+
+## Java 代码装配 Bean
+
+通过 Java 代码装配 Bean 需要一个配置类
+
+Config.java
+```
+@Configuration
+public class Config {
+	@Bean
+	public MyBean createMyBean() {
+		return new MyBean();
+	}
+}
+
+```
+
+获得上下文方式改变了：
+```
+ApplicationContext con = new AnnotationConfigApplicationContext(Config.class);
+		MyBean b = con.getBean(MyBean.class);
+		b.send();
+```
+## 自动装配 Bean
+
+配置类中加入注解： @ComponentScan 和 @Configuration
+
+获得上下文:
+```
+ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+	        
+MyBean my = (MyBean) ctx.getBean("myBean");
+my.send();
+```
+
+@ComponentScan 注解是启用组件扫描，如果没有其他配置，会默认扫描与配置列相同的包。可以在注解中设置参数，具体可进入源码查看
+
+在 beans.xml 配置文件中添加自动扫描包路径
+`<context:component-scan base-package="core" />`
