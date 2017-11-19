@@ -6,7 +6,10 @@
 
 ## [ Java ]()
 
-## [ Linux ]()
+[ spring ](./Java/spring.md)
+
+## [ Linux ](./Linux/linux.md)
+
 
 ## [ Database ]()
 
@@ -14,6 +17,15 @@
 
 ## [ Java EE ]()
 
+[ Activiti ](./JavaEE/activiti/activiti.md)
+
+[ thymeleaf ](./JavaEE/thymeleaf.md)
+
+
 ## [ Other ]()
 
 [ HTTP ](./Other/http.md)
+
+[ Markdown ](./Other/markdown.md)
+
+[ IDEA ](./Other/IDEA.md)
