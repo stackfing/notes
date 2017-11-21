@@ -38,3 +38,11 @@ export PS1='\u@\h:\[\e[1;36m\]\w\[\e[2;33m\]$(parse_git_branch)\[\e[0m\]$ '
 建议，笔记本的硬盘低于 7200 转的不要设置太高的交换分区使用，大大影响性能，因为交换分区就是在硬盘上，频繁的交换数据
 
 ***
+
+## 修改源
+
+`sudo gedit /etc/apt/sources.list`
+
+修改成功后更新
+
+`sudo apt update`

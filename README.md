@@ -10,6 +10,7 @@
 
 ## [ Linux ](./Linux/linux.md)
 
+[Linux](./Linux/linux.md)
 
 ## [ Database ]()
 
