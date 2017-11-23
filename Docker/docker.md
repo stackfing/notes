@@ -44,6 +44,12 @@ MAINTAINER xbf
 CMD echo "hello docker"
 ```
 
-docker build -t hello_docker . 
+`docker build -t hello_docker . `
 
 -t 参数为给这个镜像一个标签名，名为 hello_docker
+
+
+
+***
+
+`docker logs 容器名`   显示出容器控制台的标准输出
