@@ -22,6 +22,11 @@
 
 # 远程
 
+关联远程仓库 `git remote add origin git@github.com:username/learngit.git` 要将 ssh key 公钥放在账户列表中，关联好之后远程仓库名称是 origin
+
+`git push origin master` 推送当前分支 master 到远程分支
+
+推送本地分支到远程分支并且关联远程分支 `git push origin -u master`
 
 
 
@@ -40,3 +45,28 @@ git checkout 自己分支
 git merge --no-ff 别人分支
 
 有冲突就解决 add commit 最后 push origin 自己分支
+
+# 撤销修改
+
+在工作区中作了修改，暂未提交在暂存区：`git checkout -- file` 
+
+在工作区中作了修改，已经提交在暂存区：`git reset HEAD file` 将暂存区的撤销，重新放回工作区，然后 `git checkout -- file`
+
+# 分支
+
+创建分支 `git checkout -b dev` 创建 dev 分支并且切换到 dev 分支
+
+查看当前分支 `git branch`
+
+切换分支 `git checkout dev`
+
+合并分支 先切换到 master 然后 `git merge dev`
+
+# 冲突
+
+master 有修改， dev 也有修改，在 `git merge dev` 时不可以快速合并，需要处理冲突
+
+冲突处理完毕，`git add -A` 添加到暂存区然后提交，合并完成
+
+查看分支合并图： `git log --graph`
+
