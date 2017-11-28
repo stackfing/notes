@@ -1,15 +1,19 @@
+# 初始化
 
-# 暂未分类
 
-显示运行的进程 `ps` `ps -ax`  查看所有进程 `ps -ef`
+## Linux 下搭建 Java 环境：
 
-杀死进程 `kill -9 pid` -9 是强制杀死
+编辑 `/etc/profile` 在文件末尾添加：
 
-添加到 sudo 组 编辑 /etc/sudoers 在 cmnd alias specification 添加：`root    ALL=(ALL:ALL) ALL`
+```
+export JAVA_HOME=jdk目录
+export JRE_HOME=${JAVA_HOME}/jre  
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
+export PATH=${JAVA_HOME}/bin:$PATH 
+```
+保存完毕 `source /etc/profile` 让文件生效
 
-从本地拷贝文件到远程服务器 `scp file username@139.199.169.119:/home/filepath`
-
-终端中添加显示 git 分支
+## 终端中添加显示 git 分支
 ```
 ## 添加git分支
 function parse_git_dirty {
@@ -21,6 +25,18 @@ function parse_git_branch {
 export PS1='\u@\h:\[\e[1;36m\]\w\[\e[2;33m\]$(parse_git_branch)\[\e[0m\]$ '
 ```
 ***其中\[\e[2;33m\]是颜色***
+
+# 暂未分类
+
+显示运行的进程 `ps` `ps -ax`  查看所有进程 `ps -ef`
+
+杀死进程 `kill -9 pid` -9 是强制杀死
+
+添加到 sudo 组 编辑 /etc/sudoers 在 cmnd alias specification 添加：`root    ALL=(ALL:ALL) ALL`
+
+从本地拷贝文件到远程服务器 `scp file username@139.199.169.119:/home/filepath`
+
+
 
 在后台运行命令 `command &` 例如 : `java -jar maven.war &`
 
