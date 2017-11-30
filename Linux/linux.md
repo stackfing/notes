@@ -36,7 +36,13 @@ export PS1='\u@\h:\[\e[1;36m\]\w\[\e[2;33m\]$(parse_git_branch)\[\e[0m\]$ '
 
 从本地拷贝文件到远程服务器 `scp file username@139.199.169.119:/home/filepath`
 
+### deepin 中鼠标滚轮失效
 
+先安装 imwheel
+
+`sudo apt-get install imwheel`
+
+然后点击 [下载脚本](http://ox6dv1vhi.bkt.clouddn.com/imwheel-script.sh)
 
 在后台运行命令 `command &` 例如 : `java -jar maven.war &`
 
@@ -62,3 +68,15 @@ export PS1='\u@\h:\[\e[1;36m\]\w\[\e[2;33m\]$(parse_git_branch)\[\e[0m\]$ '
 修改成功后更新
 
 `sudo apt update`
+
+## 桌面图标
+```
+[Desktop Entry]
+Categories=chat;
+Encoding=UTF-8
+Exec="/home/fing/application/ide/VSCode-linux-x64/code" %u # 应用程序目录
+Icon=/home/fing/application/ide/VSCode-linux-x64/code.png  # 桌面图标目录
+Name=VSCode
+Name[zh_CN]=VSCode
+Type=Application
+```

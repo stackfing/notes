@@ -1,5 +1,19 @@
 Docker 是一个开源应用容器
 
+
+# Linux 下安装
+
+`sudo apt install docker.io`
+
+安装好之后每次需要 `sudo` 才能使用，为了省去麻烦，将用户添加到 docker 用户组中
+
+如果没有用户组 则 `sudo groupadd docker`
+
+将当前用户添加到 `docker` 用户组 `sudo gpasswd -a $USER docker`
+
+***
+
+
 批量全部删除容器
 
 docker rm `docker ps -a |awk '{print $1}' | grep [0-9a-z]`
