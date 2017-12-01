@@ -17,12 +17,12 @@ export PATH=${JAVA_HOME}/bin:$PATH
 ```
 ## 添加git分支
 function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
-  }
-function parse_git_branch {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/*\(.*\)/[\1$(parse_git_dirty)]/"
-}
-export PS1='\u@\h:\[\e[1;36m\]\w\[\e[2;33m\]$(parse_git_branch)\[\e[0m\]$ '
+	  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+	    }
+	    function parse_git_branch {
+		        git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/*\(.*\)/[\1$(parse_git_dirty)]/"
+		}
+	export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\e[1;36m\]\w\[\e[2;33m\]$(parse_git_branch)\[\e[0m\]$ '
 ```
 ***其中\[\e[2;33m\]是颜色***
 
