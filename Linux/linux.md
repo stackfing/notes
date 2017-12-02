@@ -80,3 +80,16 @@ Name=VSCode
 Name[zh_CN]=VSCode
 Type=Application
 ```
+
+## Deepin 将自定义图标放在启动器中
+
+将 `.desktop` 文件拷贝至 `/usr/share/applications` 目录
+
+## Deepin 开机启动
+
+在 `.config/autostart` 目录下建立 .desktop 文件，加入以下内容：
+```
+[Desktop Entry]
+Type=Application
+Exec=/home/application/... # 需要运行文件的绝对路径
+```
