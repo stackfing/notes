@@ -36,6 +36,8 @@ function parse_git_dirty {
 
 从本地拷贝文件到远程服务器 `scp file username@139.199.169.119:/home/filepath`
 
+软链接：`ln -s 链接位置 被链接位置` 例如： `ln -s /home/test/link link` 将会在当前工作目录下建立一个 link 文件夹，对 link 文件夹里面文件操作就等于在 /home/test/link 文件夹中操作
+
 ### deepin 中鼠标滚轮失效
 
 先安装 imwheel
