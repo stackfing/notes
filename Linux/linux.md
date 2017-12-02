@@ -26,7 +26,7 @@ function parse_git_dirty {
 ```
 ***其中\[\e[2;33m\]是颜色***
 
-# 暂未分类
+# 基本使用
 
 显示运行的进程 `ps` `ps -ax`  查看所有进程 `ps -ef`
 
@@ -93,3 +93,7 @@ Type=Application
 Type=Application
 Exec=/home/application/... # 需要运行文件的绝对路径
 ```
+
+## Chrome 提示重新启动chrome以启用flash
+
+官网下载 chrome 的 deb 安装包，安装后 `sudo apt purge libflashplugin-pepper` 卸载深度的 flash 插件， `rm -rf ~/.config/google-chrome/PepperFlash` 重新打开 chrome 输入：`chrome://components` 点击更新 flash，更新完毕重启即可
