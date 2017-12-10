@@ -12,3 +12,8 @@
 建表：`create table 表明(字段设定列表)`
 
 删库删表：`drop database 库名` `drop table 表名`
+
+***
+
+创建时间：CURRENT_TIMESTAMP
+修改时间：ON UPDATE CURRENT_TIMESTAMP

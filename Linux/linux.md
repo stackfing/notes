@@ -61,6 +61,14 @@ function parse_git_dirty {
 
 建议，笔记本的硬盘低于 7200 转的不要设置太高的交换分区使用，大大影响性能，因为交换分区就是在硬盘上，频繁的交换数据
 
+## 修改磁盘卷标
+
+查看所有分区 `sudo fdisk -l`
+
+卸载需要修改的分区 例如 `sudo umount /dev/sda1`
+
+修改卷标： `sudo ntfslabel /dev/sda1 soft`
+
 ***
 
 ## 修改源
