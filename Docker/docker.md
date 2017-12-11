@@ -13,16 +13,40 @@ Docker 是一个开源应用容器
 
 ***
 
+## 容器
 
-批量全部删除容器
+### 启动容器
 
-docker rm `docker ps -a |awk '{print $1}' | grep [0-9a-z]`
+启动一个已经终止的容器 `docker start 容器名`
 
-运行 `docker run -it 容器名`
+运行 `docker run -it 容器名`  `-t` 是分配一个伪终端、`-i` 是让容器标准输入保持打开、`-d` 守护转台运行
 
 查看运行的容器 `docker ps`
 
 打开并且映射端口 `docker run -it -p xxxx:yyyy` 镜像名
+
+### 终止容器
+
+终止一个正在运行的容器 `docker stop 容器名`
+
+查看已经终止的容器 `docker ps -a`
+
+### 进入容器
+
+使用 `attach` 命令 `docker attach 容器名`
+
+## 数据卷
+
+使用 `docker run` 命令时，用 `-v` 创建数据卷挂载在容器中 `docker run -d 容器名 -v /src/web:/opt/web`
+
+-v 后面参数 左边本机目录，右边容器里的目录，默认为读写权限，容器目录加 :ro 为只读权限
+
+
+# 其他未整理
+
+批量全部删除容器
+
+docker rm `docker ps -a |awk '{print $1}' | grep [0-9a-z]`
 
 查看某个容器占用的端口 `docker port 容器id`
 

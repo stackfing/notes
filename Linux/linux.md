@@ -38,6 +38,16 @@ function parse_git_dirty {
 
 软链接：`ln -s 链接位置 被链接位置` 例如： `ln -s /home/test/link link` 将会在当前工作目录下建立一个 link 文件夹，对 link 文件夹里面文件操作就等于在 /home/test/link 文件夹中操作
 
+## 安装软件
+
+`sudo apt install 软件名`
+
+记不住软件名称，只记得几个字母的话可以查找：`sudo apt-cache search all | grep 软件名`
+
+删除应用 `sudo apt remove 软件名` 只会删除应用，不会删除配置文件
+
+删除应用加配置文件 `sudo apt purge 软件名`
+
 ### deepin 中鼠标滚轮失效
 
 先安装 imwheel
