@@ -18,10 +18,9 @@ public static void main(final String[] args) throws Exception {
 
 AbstractApplicationContext
 
-将资源加载器加载好
-
 AbstractRefreshableApplicationContext
 
 AbstractRefreshableConfigApplicationContext
 
 ClassPathXmlApplicationContext
+
