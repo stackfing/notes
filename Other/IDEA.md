@@ -19,3 +19,5 @@ Ctrl + Shift +退格键（导航|最后编辑的位置）带你回到你的更�
 构造方法 alt + insert
 
 大小写不敏感：`file->settings->Editor->General->Code Completion -> Case sensitive completion` 设置为 `None`
+
+上下移动代码 alt + shift + up/down

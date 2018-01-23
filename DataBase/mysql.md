@@ -13,6 +13,8 @@
 
 删库删表：`drop database 库名` `drop table 表名`
 
+导出数据库： `mysqldump -u root -p 库名 > sql文件名`
+
 ***
 
 创建时间：CURRENT_TIMESTAMP
