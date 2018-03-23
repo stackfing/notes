@@ -6,7 +6,7 @@
 
 ## [ Java ]()
 
-[jvm] (./Java/jvm.md)
+[jvm](./Java/jvm.md)
 
 [ spring ](./Java/spring.md)
 
