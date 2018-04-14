@@ -18,4 +18,26 @@ unmao L
 map L nextTab
 unmap K
 map K previousTab
+unmap d
+unmap s
+unmap a
+unmap w
+unmap D
+unmap S
+unmap A
+unmap W
+unmap gg
+unmap u
+unmap H
+unmap C
+map w scrollPageUp
+map s scrollPageDown
+map W scrollToTop
+map S scrollToBottom
+map d nextTab
+map a previousTab
+map u copyCurrentUrl
+map A goBack
+map D goForward
+map C openCopiedUrlInNewTab
 ```
