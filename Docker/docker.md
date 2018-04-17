@@ -91,3 +91,5 @@ CMD echo "hello docker"
 ***
 
 `docker logs 容器名`   显示出容器控制台的标准输出
+
+`docker cp 容器名: 文件 docker容器的路径` 把宿主文件复制到容器中
