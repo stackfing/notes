@@ -35,6 +35,10 @@ Docker 是一个开源应用容器
 
 使用 `attach` 命令 `docker attach 容器名`
 
+## 镜像
+
+删除镜像: docker rmi 镜像名
+
 ## 数据卷
 
 使用 `docker run` 命令时，用 `-v` 创建数据卷挂载在容器中 `docker run -d 容器名 -v /src/web:/opt/web`
