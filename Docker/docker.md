@@ -38,6 +38,7 @@ Docker 是一个开源应用容器
 ## 镜像
 
 删除镜像: docker rmi 镜像名
+将已存在的容器制作成镜像: docker commit 容器id 镜像名
 
 ## 数据卷
 
