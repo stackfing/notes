@@ -57,6 +57,8 @@ docker rm `docker ps -a |awk '{print $1}' | grep [0-9a-z]`
 
 查看所有已经创建的容器 `docker ps -a`
 
+查看运行容器占用资源信息 `docker stats 容器名`
+
 ****
 
 获取image `docker pull`
