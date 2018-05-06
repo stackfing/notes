@@ -11,3 +11,7 @@
 `./shadowsocks.sh 2>&1 | tee shadowsocks.log`
 
 
+VSCode vue 插件： vetur
+
+vetur 插件格式化 template 问题：
+将 vscode 配置文件 vetur.format.defaultFormatter.html:none 修改为 js-beautify-html
