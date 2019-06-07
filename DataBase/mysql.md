@@ -42,3 +42,7 @@ MySQL Server version: 5.7.21-1 (Debian)
 
 `update user set plugin = 'mysql_native_password where user = 'root'; `
 最后，还要记得更新！
+
+
+### 中文排序
+`SELECT * FROM sqllearn.Orders ORDER BY orderNumber DESC, convert(company using gbk)` 需要使用 `convert` 转换
