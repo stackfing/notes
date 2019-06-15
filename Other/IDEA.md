@@ -21,3 +21,10 @@ Ctrl + Shift +退格键（导航|最后编辑的位置）带你回到你的更�
 大小写不敏感：`file->settings->Editor->General->Code Completion -> Case sensitive completion` 设置为 `None`
 
 上下移动代码 alt + shift + up/down
+
+## 在窗口中显示字节码
+`File->Tools->External Tools` 添加一个 Tools 
+Group:External Tools
+Program:/home/fing/application/sdk/jdk/1.8.0-144/bin/javap
+Arguments:-v $FileClass$
+Working directory:$OutputPath$
