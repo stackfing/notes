@@ -14,7 +14,7 @@ vimium 配置：
 # Insert your preferred key mappings here.
 unmap J
 map J goForward
-unmao L
+unmap L
 map L nextTab
 unmap K
 map K previousTab
